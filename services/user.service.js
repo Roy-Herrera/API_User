@@ -55,8 +55,9 @@ class UserServices{
     if(index === -1) {
       throw boom.notFound('Product not exist');
     }
+    const copi = this.users[index]
     this.users.splice(index, 1);
-    return { id };
+    return copi
   }
 }
 
